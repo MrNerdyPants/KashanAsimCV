@@ -45,6 +45,12 @@ globalThis.cv = Object.assign(globalThis.cv || {}, {
       "platform": "My CV",
       "handle": "personal site",
       "url": "https://kashanasim.netlify.app"
+    },
+    {
+      "id": "a9mcCX9vUMCadCJtnmw3",
+      "platform": "GitHub",
+      "handle": "personal site",
+      "url": "https://github.com/MrNerdyPants"
     }
   ],
   "writingTab": {
