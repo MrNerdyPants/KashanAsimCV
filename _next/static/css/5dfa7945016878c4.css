@@ -1,0 +1,111 @@
+:root {
+  --font-size: max(6vmax, 28.8px);
+  --padding: max(4vmax, 19.2px);
+  --backgroundColor: #fff;
+  --textColor: #000;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundColor: #000;
+    --textColor: #fff;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body,
+html {
+  position: relative;
+}
+body {
+  font-family: Inter Variable, sans-serif;
+  font-size: var(--font-size);
+  line-height: 1.1;
+  color: var(--textColor);
+  background-color: var(--backgroundColor);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  text-size-adjust: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.about {
+  padding: var(--padding);
+}
+.about h1 {
+  font-size: var(--font-size);
+  font-weight: 600;
+}
+.byline {
+  text-wrap: balance;
+  font-weight: 600;
+}
+.links {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.link {
+  background-color: var(--textColor);
+  color: var(--backgroundColor);
+  border-radius: 100vw;
+  line-height: 1.6;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: block;
+}
+body.dragging .link {
+  cursor: -webkit-grabbing;
+}
+body.dragging .link a {
+  pointer-events: none;
+}
+.link a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0 var(--padding);
+  border: none;
+  outline: none;
+  display: block;
+  touch-action: manipulation !important;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.clock {
+  width: max(20dvmax, 96px);
+  aspect-ratio: 1/1;
+  box-shadow: 0 0 0 max(0.5dvmax, 1px) var(--textColor) inset;
+  border-radius: 50%;
+  background-color: var(--backgroundColor);
+  position: relative;
+  cursor: -webkit-grab;
+}
+.clock:active {
+  cursor: -webkit-grabbing;
+}
+.clockPiece {
+  position: absolute;
+  inset: max(0.5dvmax, 1px);
+}
+.clockPiece svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
